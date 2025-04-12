@@ -27,7 +27,7 @@ export default function Level1() {
           <div className="text-white border border-black text-xl font-bold w-1/2">Turn on your incandecent light bulb</div>
           <div className="text-white border border-black text-xl font-bold w-1/2">Open your window and let the sunlight in</div>
         </div>
-        <button className={`flex flex-row    gap-4`} onClick={() => router.push('/game/level2')}>Next</button>
+        <button className={`flex flex-row    gap-4`} onClick={() => router.push('/game/level3')}>Next</button>
         </div>
       </div>
       
