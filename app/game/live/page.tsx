@@ -14,7 +14,7 @@ export default function LivePage() {
     <main className="relative min-h-screen w-full bg-gradient-to-b from-[#2C3E50] to-[#34495E]">
       <div className="absolute inset-0 flex justify-center items-center w-full h-full">
         <svg viewBox="0 0 600 400" className="w-full h-full">
-          {/* Background */}
+          {/* Background  */} 
           <rect width="600" height="400" fill="#000" />
           
           {/* Stars */}
