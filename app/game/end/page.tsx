@@ -2,69 +2,69 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+
 export default function EndPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const audio = new Audio('/sounds/end.mp3');
-    audio.play();
+    let audio: HTMLAudioElement | null = null;
+    
+   audio = new Audio('../public/end.mp3');
+   audio.volume = 0.5;
+   audio.play();
+
+    // Cleanup function
+   
+    
   }, []);
 
   return (
-    <main className="relative min-h-screen w-full bg-gradient-to-b from-black to-[#2C3E50]">
+    <main className="relative min-h-screen w-full bg-gradient-to-b from-[#2C3E50] to-[#34495E]">
       <div className="absolute inset-0 flex justify-center items-center w-full h-full">
         <svg viewBox="0 0 600 400" className="w-full h-full">
           {/* Background */}
-          <rect width="600" height="400" fill="#1B1B1B" />
-
-          {/* Intense Smoke */}
+          <rect width="600" height="400" fill="#2C3E50" />
+          
+          {/* Smoke */}
           <g className="animate-pulse">
-            <ellipse cx="300" cy="100" rx="60" ry="30" fill="#444" opacity="0.5" />
-            <ellipse cx="300" cy="80" rx="50" ry="20" fill="#222" opacity="0.3" />
-            <ellipse cx="300" cy="60" rx="40" ry="15" fill="#111" opacity="0.2" />
+            <ellipse cx="300" cy="100" rx="50" ry="30" fill="#666" opacity="0.3" />
+            <ellipse cx="300" cy="80" rx="40" ry="20" fill="#666" opacity="0.2" />
+            <ellipse cx="300" cy="60" rx="30" ry="15" fill="#666" opacity="0.1" />
           </g>
 
-          {/* Darker Flames */}
+          {/* Flames */}
           <g className="animate-pulse">
-            <path d="M280 200 Q300 140 320 200 Q340 260 320 310 Q300 360 280 310 Z" fill="#b30000" />
-            <path d="M260 220 Q280 160 300 220 Q320 280 300 330 Q280 380 260 330 Z" fill="#e60000" />
-            <path d="M300 220 Q320 160 340 220 Q360 280 340 330 Q320 380 300 330 Z" fill="#ff1a1a" />
+            <path d="M280 200 Q300 150 320 200 Q340 250 320 300 Q300 350 280 300 Z" fill="#ff4500" />
+            <path d="M260 220 Q280 170 300 220 Q320 270 300 320 Q280 370 260 320 Z" fill="#ff8c00" />
+            <path d="M300 220 Q320 170 340 220 Q360 270 340 320 Q320 370 300 320 Z" fill="#ff8c00" />
           </g>
 
-          {/* Earthy (burnt and cracked) */}
-          <circle cx="300" cy="200" r="80" fill="#222" stroke="#ff0000" strokeWidth="4" />
+          {/* Earthy (burning/dead) */}
+          <circle cx="300" cy="200" r="80" fill="#333" />
+          
+          {/* Landmasses (charred) */}
+          <path d="M280 160 Q260 140 290 130 Q320 140 310 160 Z" fill="#222" />
+          <path d="M320 210 Q340 230 310 240 Q290 230 300 210 Z" fill="#222" />
+          <path d="M260 190 Q250 180 260 170 Q270 180 265 190 Z" fill="#222" />
+          <path d="M330 170 Q345 160 340 150 Q325 155 328 170 Z" fill="#222" />
 
-          {/* Cracks */}
-          <g stroke="#660000" strokeWidth="3">
-            <line x1="280" y1="140" x2="320" y2="260" />
-            <line x1="300" y1="130" x2="300" y2="270" />
-            <line x1="260" y1="180" x2="340" y2="220" />
-          </g>
-
-          {/* Blood-like Lava */}
-          <path d="M295 240 Q300 250 305 240 Q310 230 312 260 Q310 270 295 265 Q290 250 295 240 Z" fill="#8B0000" />
-          <path d="M280 260 Q285 275 290 260 Q295 245 295 280 Q285 290 280 275 Z" fill="#B22222" />
-
-          {/* Dead face */}
-          <g stroke="#cc0000" strokeWidth="3">
+          {/* Dead face with X eyes and frown */}
+          <g stroke="#666" strokeWidth="3">
+            {/* X eyes */}
             <line x1="265" y1="185" x2="275" y2="195" />
             <line x1="275" y1="185" x2="265" y2="195" />
             <line x1="305" y1="185" x2="315" y2="195" />
             <line x1="315" y1="185" x2="305" y2="195" />
+            {/* Frown */}
             <path d="M285 220 Q300 200 315 220" fill="none" />
           </g>
 
-          {/* Blood drops */}
-          <circle cx="290" cy="310" r="5" fill="#8B0000" />
-          <circle cx="310" cy="320" r="4" fill="#8B0000" />
-          <circle cx="300" cy="330" r="6" fill="#8B0000" />
-
           {/* Game Over Text */}
-          <text x="300" y="50" fontSize="28" fill="#ff4d4d" fontFamily="Arial" textAnchor="middle" fontWeight="bold">
+          <text x="300" y="50" fontSize="24" fill="#fff" fontFamily="Arial" textAnchor="middle" fontWeight="bold">
             GAME OVER
           </text>
-          <text x="300" y="80" fontSize="16" fill="#ffb3b3" fontFamily="Arial" textAnchor="middle">
-            Earthy bled out and burned in the climate catastrophe
+          <text x="300" y="80" fontSize="16" fill="#fff" fontFamily="Arial" textAnchor="middle">
+            Earthy couldn't survive the climate crisis
           </text>
 
           {/* Restart Button */}

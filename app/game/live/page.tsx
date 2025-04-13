@@ -2,13 +2,19 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+
 export default function LivePage() {
   const router = useRouter();
 
-  useEffect(() => {
-    const audio = new Audio('/sounds/live.mp3');
-    audio.play();
-  }, []);
+const audio = new Audio('public/happy.mp3');
+
+    
+
+  audio.volume = 0.5;
+  audio.play();
+
+    // Cleanup function 
+
 
   return (
     <main className="relative min-h-screen w-full bg-gradient-to-b from-[#2C3E50] to-[#34495E]">

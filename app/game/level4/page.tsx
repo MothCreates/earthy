@@ -62,7 +62,7 @@ export default function Level4() {
             {/* Game Content */}
             <div className="absolute bottom-16 left-0 right-0 flex flex-col items-center gap-4 z-20">
                 <div className="text-white text-xl font-bold w-3/4 max-w-md text-center bg-black/60 p-4 rounded-lg">
-                    You're checking out at the grocery store. The cashier asks: Would you like a plastic bag or a paper bag?
+                    Earthy is finishing up his grocery shopping. Should he
                 </div>
 
                 <div className="flex flex-row gap-4">
@@ -70,13 +70,13 @@ export default function Level4() {
                         className={`bg-[#2D8B84] hover:bg-[#1e5f5b] text-white text-lg font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${BadQuestionAnswered ? 'opacity-0' : 'opacity-100'}`}
                         onClick={() => setBadQuestionAnswered(true)}
                     >
-                        Plastic bag
+                        Bag his groceries in plastic bags
                     </button>
                     <button
                         className={`bg-[#2D8B84] hover:bg-[#1e5f5b] text-white text-lg font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg ${GoodQuestionAnswered ? 'opacity-0' : 'opacity-100'}`}
                         onClick={() => setGoodQuestionAnswered(true)}
                     >
-                        Paper bag
+                        Use his reusable bags
                     </button>
                 </div>
 
@@ -85,7 +85,8 @@ export default function Level4() {
                         Plastic bags take hundreds of years to break down and often end up polluting oceans and harming wildlife.
                     </div>
                     <div className={`text-white text-xl ${GoodQuestionAnswered ? 'opacity-100' : 'opacity-0'} font-bold w-1/2 bg-black/60 p-4 rounded-lg`}>
-                        Paper bags are biodegradable and recyclable, making them a more eco-friendly option.
+                        Using reusable bags significantly benefits the environment by reducing plastic waste, minimizing litter, and conserving resources!
+
                     </div>
                 </div>
 
