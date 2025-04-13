@@ -10,7 +10,7 @@ export default function Level2() {
 
   return (
     <main className="relative min-h-screen bg-gradient-to-b from-[#2C3E50] to-[#34495E] flex items-center justify-center overflow-hidden">
-      {/* Tiled Bathroom Background */}
+      {/* Tiled Bathroom Background  */}
       <div className="absolute inset-0 grid grid-cols-12 grid-rows-8 gap-px bg-[#2C3E50] opacity-20">
         {[...Array(96)].map((_, i) => (
           <div key={i} className="bg-[#95A5A6] border border-white/10"></div>
