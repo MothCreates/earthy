@@ -6,12 +6,6 @@ import { useEffect } from 'react';
 export default function LivePage() {
   const router = useRouter();
 
-const audio = new Audio('public/happy.mp3');
-
-    
-
-  audio.volume = 0.5;
-  audio.play();
 
     // Cleanup function 
 
